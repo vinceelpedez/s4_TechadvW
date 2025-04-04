@@ -1,0 +1,126 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Lato', sans-serif;
+    background: #f7f4f1;
+    color: #333;
+  }
+  
+  /* Header Section */
+  header {
+    background: linear-gradient(135deg, #4b6584, #3867d6);
+    color: #fff;
+    padding: 40px 20px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  }
+  
+  .header-content h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 3rem;
+    margin-bottom: 10px;
+    letter-spacing: 1.2px;
+  }
+  
+  .header-content p {
+    font-size: 1.2rem;
+    opacity: 0.9;
+    margin-bottom: 20px;
+  }
+  
+  /* Main Menu Button */
+  #main-menu-btn {
+    padding: 12px 30px;
+    background: #ff8c00;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    font-size: 1.1rem;
+    border-radius: 25px;
+    transition: background 0.3s ease, transform 0.3s ease;
+  }
+  
+  #main-menu-btn:hover {
+    background: #ff9933;
+    transform: translateY(-3px);
+  }
+  
+  /* Restaurant List Grid */
+  .restaurant-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+  }
+  
+  /* Restaurant Card */
+  .restaurant .card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 12px;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+  }
+  
+  .restaurant .card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+  }
+  
+  /* Restaurant Image */
+  .restaurant img {
+    display: block;
+    width: 100%;
+    height: auto;
+    filter: brightness(0.95);
+    transition: filter 0.4s ease;
+  }
+  
+  .restaurant .card:hover img {
+    filter: brightness(0.75);
+  }
+  
+  /* Overlay with Text */
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0,0,0,0.65);
+    color: #fff;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .overlay h2 {
+    font-family: 'Playfair Display', serif;
+    margin-bottom: 10px;
+    font-size: 1.8rem;
+    letter-spacing: 0.5px;
+  }
+  
+  .overlay p {
+    font-size: 1rem;
+    line-height: 1.6;
+    max-width: 90%;
+  }
+  
+  /* Hover effect: Show overlay text when mouse hovers over card */
+  .restaurant .card:hover .overlay {
+    opacity: 1;
+  }
+  
